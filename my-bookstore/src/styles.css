@@ -1,0 +1,177 @@
+
+body, html {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+h1, h2 {
+  color: #353535;
+}
+
+@keyframes rainbow {
+  0% { background-color: #6e48aa; }
+  20% { background-color: #9d50bb; }
+  40% { background-color: #ea4c89; }
+  60% { background-color: #ff7e5f; }
+  80% { background-color: #ffd571; }
+  100% { background-color: #2ccce4; }
+}
+
+header {
+  animation: rainbow 10s infinite alternate; 
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+
+.book-list-container {
+  display: flex;
+  justify-content: center;
+}
+
+.book-list {
+  list-style: none;
+  padding: 0;
+  width: 100%; 
+}
+
+.book-item {
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 30px; 
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; 
+}
+
+.book-item button {
+  margin-left: 30px;  
+  padding: 5px 10px;  
+}
+
+
+.book-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.book-details {
+  flex-grow: 1;
+}
+
+.book-details p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+
+button {
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  
+}
+
+button:hover {
+  background-color: #4cae4c;
+}
+
+.add-book-button {
+  display: block;
+  margin: 60px auto; 
+}
+
+input[type="text"], textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"], textarea {
+  width: calc(100% - 20px); /* 减少输入框的宽度 */
+  padding: 10px;
+  margin-top: 5px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+
+label {
+  display: block;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+
+.add-book-page, .edit-book-page {
+  background: white;
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+.add-book-button {
+  display: block;
+ 
+  width: 200px; /* 设置按钮宽度 */
+  height: 50px; /* 设置按钮高度 */
+}
+
+
+.modal {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 500px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #666;
+}
+
+.close:hover {
+  color: #333;
+}
